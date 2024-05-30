@@ -237,3 +237,248 @@ exports.generateEmailTemplate = (code) => {
     </html>
     `;
 };
+
+exports.plainEmailTemplete = (heading, message) => {
+  return `
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Signing Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 100px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            color: #333333;
+        }
+        .content p {
+            color: #666666;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #999999;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/100x100.png?text=Logo" alt="App Logo">
+        </div>
+        <div class="content">
+            <h1>Welcome to [App Name]!</h1>
+            <p>Thank you for signing up for our app. We're thrilled to have you on board. Our app is designed to help you [briefly describe the app’s purpose or benefit].</p>
+            <p>To get started, simply click the button below to log in and begin exploring all the features we offer.</p>
+            <a href="[Your App URL]" class="button">Get Started</a>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, feel free to <a href="mailto:support@app.com">contact us</a> at any time.</p>
+            <p>&copy; 2024 [App Name]. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+  `;
+};
+
+exports.generatePasswordResetTemplate = (url) => {
+  return `
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Your Password</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header img {
+            max-width: 100px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            color: #333333;
+        }
+        .content p {
+            color: #666666;
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #999999;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/100x100.png?text=Logo" alt="App Logo">
+        </div>
+        <div class="content">
+            <h1>Reset Your Password</h1>
+            <p>We received a request to reset your password. Click the button below to reset it.</p>
+            <a href="${url}" class="button">Reset Password</a>
+            <p>If you did not request a password reset, please ignore this email or contact support if you have questions.</p>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, feel free to <a href="mailto:support@app.com">contact us</a> at any time.</p>
+            <p>&copy; 2024 [App Name]. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+  `;
+};
+
+exports.plainEmailTemplete = (heading, message) => {
+  return `
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset Successfully</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+        .content p {
+            color: #666666;
+            line-height: 1.6;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #999999;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/100x100.png?text=✓" alt="Success Icon">
+        </div>
+        <div class="content">
+            <h1>${heading}</h1>
+            <p>${message}</p>
+        </div>
+        <div class="footer">
+            <p>If you have any questions, feel free to <a href="mailto:support@app.com">contact us</a> at any time.</p>
+            <p>&copy; 2024 [App Name]. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+  `;
+};
